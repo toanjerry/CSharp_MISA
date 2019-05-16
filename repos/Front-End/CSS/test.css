@@ -1,0 +1,40 @@
+#box
+{
+    width:200px;
+    height:2000px;
+    background-color:lightgreen;
+    padding:10px 10px;
+}
+#content {
+    background-color: red;
+    /*width: 100%;*/
+    height: 100%;
+    margin:auto;
+    text-align:center;
+    line-height:2000px;
+    font-family:Roboto;
+    font-size:larger;
+    /*padding:40% 0;*/
+}
+#circle{
+    width:0;
+    height:0;
+    border-color:red;
+    border-style:double;
+    border-width:100px;
+    border-radius:100px;
+    border-left-color:blue;
+    border-right-color:green;
+    border-bottom-color:rebeccapurple;
+    position:fixed;
+    right:20px;
+    top:20px;
+
+}
+#con {
+    width: 100px;
+    height: 100px;
+    background-color:aqua;
+    position:absolute;
+    bottom:-200px;
+}
