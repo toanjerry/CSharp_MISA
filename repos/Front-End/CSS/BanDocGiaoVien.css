@@ -9,27 +9,10 @@ body {
     font-family: tahoma,arial,verdana,sans-serif;
     background-color:white;
 }
+/*css cho phan header*/
 .header{
     width:100%;
     min-height:75px;
-    border:1px solid black;
-}
-.table-content {
-    position:absolute;
-    width: 100%;
-    border: 1px solid red;
-    bottom:0;
-    top:77px;
-    padding:8px;
-}
-.lable-header {
-    min-height: 40px;
-    max-width:400px;
-    display:inline-block;
-}
-.menu-header {
-    min-height: 35px;
-    border: 1px solid black;
 }
 .left-content-header{
     list-style:none;
@@ -57,12 +40,12 @@ body {
     width: 20px;
     height: 20px;
     border: 1px solid #ccc;
-    margin: 10px 8px;
+    margin: 9px 8px;
     font-size: 18px;
     color: rgba(153,134,117,1);
     text-align: center;
-    line-height: 100%;
     vertical-align: middle;
+    line-height:100%;
 }
 .lable-right {
     min-width: 150px;
@@ -84,8 +67,134 @@ body {
     font-weight:bold;
 }
 .bottom-header{
+    position:absolute;
     width:100%;
-    border:1px solid black;
+    top:40px;
+}
+.navbar-dropdown {
+    background-color: #998675;
+    max-width: 1000px;
+    display: inline-block;
+    height: 35px;
+}
+.navbar-dropdown a{
+    text-decoration:none;
+    padding:0 8px;
+    line-height:35px;
+    text-align:center;
+    color:white;
+    display:inline-block;
+}
+    .navbar-dropdown a:hover {
+        background-color: #7a6b5e;
+        color: #f49e42;
+    }
+.year-dropdown{
+    display:inline-block;
+    float:right;
+    margin-right:8px;
+    line-height:35px;
+    vertical-align:middle;
+}
+.year{
+    width:95px;
+    height:24px;
+    font-weight:bold;
+}
+/*css cho phan table-content*/
+.table-content {
+    position: absolute;
+    width:100%;
+    border: 1px solid red;
+    bottom: 0;
+    top: 75px;
+    padding: 15px;
+}
+.header-content {
+    width:calc(100% - 30px);
+    position: relative;
+}
+.header-lable-content {
+    font-weight:normal;
+    max-width: 500px;
+    height: 30px;
+    font-size: 22px;
+    color: rgba(0,0,0,0.87);
+}
+.choosen{
+    margin:8px 0 10px 0;
+}
+.choosen button {
+    padding: 5px 15px;
+    border: 1px solid #7a6b5e;
+    cursor: pointer;
+    color: #7a6b5e;
+    background-color:white;
+}
+.feedback {
+    position: absolute;
+    right:0;
+    top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    background-color: #f6f6f6;
+    max-width: 500px;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 5px 10px 5px 20px;
+    font-size: 15px;
+    background: url(../resourse/bandoc-icon/feedback.png) no-repeat 0 5px;
 }
 
+.main-content {
+    border: 1px solid #ccc;
+    width: calc(100% - 30px);
+    background-color: #e8e8e8;
+}
 
+.main-menu-content div {
+    display: inline-block;
+
+}
+
+.main-menu-btn {
+    margin: 5px 1px;
+    padding: 1px 5px;
+    border: 1px solid transparent;
+    height: 20px;
+    font-size: 14px;
+}
+.main-menu-btn span{
+    margin-left:18px;
+    
+}
+    .main-menu-btn:hover {
+        background-color: #ced8e5;
+        border-color: #99bce8;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+.separation {
+    color: #7ba4d8;
+}
+.registry {
+    background: url(../resourse/bandoc-icon/add.png) no-repeat 0 1px;
+}
+.edit {
+    background: url(../resourse/bandoc-icon/edit.png) no-repeat 2px 2px;
+}
+.delete {
+    background: url(../resourse/bandoc-icon/delete_metro.png) no-repeat 0 1px;
+}
+.add {
+    background: url(../resourse/bandoc-icon/refresh.png) no-repeat 1px 2px;
+}
+.tool {
+    background: url(../resourse/bandoc-icon/Utility.png) no-repeat 2px 2px;
+}
+.print {
+    background: url(../resourse/bandoc-icon/printer.png) no-repeat 2px 1px;
+}
+.help {
+    background: url(../resourse/bandoc-icon/Help16.png) no-repeat 2px 2px;
+}
