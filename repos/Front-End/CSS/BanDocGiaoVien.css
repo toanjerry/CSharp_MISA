@@ -6,7 +6,7 @@ body {
     padding: 0;
     margin: 0;
     font-size: 13px;
-    font-family: tahoma,arial,verdana,sans-serif;
+    font-family: tahoma,arial,verdana,sans-serif,'Segoe UI';
     background-color:white;
 }
 /*css cho phan header*/
@@ -77,24 +77,72 @@ body {
     display: inline-block;
     height: 35px;
 }
-.navbar-dropdown a{
-    text-decoration:none;
-    padding:0 8px;
-    line-height:35px;
-    text-align:center;
-    color:white;
+.navbar-dropdown > div{
     display:inline-block;
+    position:relative;
 }
-    .navbar-dropdown a:hover {
-        background-color: #7a6b5e;
-        color: #f49e42;
+    .navbar-dropdown > div > a {
+        text-decoration: none;
+        padding: 0 8px;
+        line-height: 35px;
+        text-align: center;
+        color: white;
+        display: inline-block;
     }
-.year-dropdown{
-    display:inline-block;
-    float:right;
-    margin-right:8px;
-    line-height:35px;
-    vertical-align:middle;
+        .navbar-dropdown > div > a:hover {
+            background-color: #7a6b5e;
+            color: #f49e42;
+        }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: white;
+    padding: 4px 15px 10px 15px;
+    font-size: 12px;
+    font-weight: normal;
+    box-shadow: 0px 1px 10px -2px;
+    border-radius:0 0 2px 2px;
+}
+    .dropdown-content a {
+        display: block;
+        text-decoration: none;
+        color: black;
+        padding: 4px 20px;
+        margin: 2px 0;
+        height: 16px;
+    }
+    .dropdown-content a:hover {
+        background-color: #e6e6e6;
+        border-radius:3px;
+        cursor:pointer;
+    }
+.dropdown:hover .dropdown-content{
+    display:block;
+}
+
+.year-dropdown {
+    display: inline-block;
+    float: right;
+    margin-right: 8px;
+    line-height: 35px;
+    vertical-align: middle;
+}
+.book-dropdown > div{
+    width:220px;
+}
+.news-dropdown > div {
+    width: 180px;
+}
+.circulate-dropdown > div {
+    width: 220px;
+}
+.catagory-dropdown > div {
+    width: 150px;
+}
+.setting-dropdown > div {
+    width: 180px;
 }
 .year{
     width:95px;
@@ -104,12 +152,13 @@ body {
 /*css cho phan table-content*/
 .table-content {
     position: absolute;
-    width:100%;
+    width:calc(100% - 30px);
     border: 1px solid red;
     bottom: 0;
     top: 75px;
     padding: 15px;
 }
+/*-----------*/
 .header-content {
     width:calc(100% - 30px);
     position: relative;
@@ -145,24 +194,30 @@ body {
     font-size: 15px;
     background: url(../resourse/bandoc-icon/feedback.png) no-repeat 0 5px;
 }
-
+/*----------*/
 .main-content {
     border: 1px solid #ccc;
-    width: calc(100% - 30px);
+    width:100%;  
+    position:relative;
+    min-height:200px;
+    max-height:600px;
+}
+/*---------------*/
+.main-menu-content {
     background-color: #e8e8e8;
+    border-bottom:1px solid #ccc;
 }
 
 .main-menu-content div {
     display: inline-block;
-
 }
 
 .main-menu-btn {
-    margin: 5px 1px;
+    margin: 3px 0px;
     padding: 1px 5px;
     border: 1px solid transparent;
-    height: 20px;
-    font-size: 14px;
+    height: 18px;
+    font-size: 13px;
 }
 .main-menu-btn span{
     margin-left:18px;
@@ -198,3 +253,122 @@ body {
 .help {
     background: url(../resourse/bandoc-icon/Help16.png) no-repeat 2px 2px;
 }
+/*css cho phan main table*/
+.table{
+    width:100%;
+    overflow-x:auto;
+    overflow-y:hidden;
+}
+
+.table-header {
+    width: 100%;
+}
+.table-body {
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 600px;
+    height: 100px;
+}
+.header-row1 div{
+    text-align:center;
+    font-weight:bold;
+}
+.table-body .row:hover {
+    background-color: #FFCB60;
+}
+.row {
+    display: inline-flex;
+    height: 30px;
+    border-bottom: 1px solid #ccc;
+}
+    .row div {
+        display: inline-block;
+        line-height: 30px;
+        border-right: 1px solid #ccc;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+.field1 {
+    min-width: 20px;
+    text-align: center;
+    max-width: 80px;
+    width: 40px;
+}
+.field2 {
+    min-width: 40px;
+    max-width: 130px;
+    width: 130px;
+}
+.field3 {
+    min-width: 130px;
+    max-width: 400px;
+    width: 200px;
+}
+.field4 {
+    min-width: 40px;
+    max-width: 80px;
+    width: 80px;
+}
+.field5 {
+    min-width: 40px;
+    max-width: 80px;
+    width: 80px;
+}
+.field6 {
+    min-width: 40px;
+    text-align: center;
+    max-width: 150px;
+    width: 100px;
+}
+.field7 {
+    min-width: 40px;
+    text-align: center;
+    max-width: 150px;
+    width: 100px;
+}
+.field8 {
+    min-width: 40px;
+    text-align: center;
+    max-width: 150px;
+    width: 100px;
+}
+.field9 {
+    min-width: 40px;
+    text-align: center;
+    max-width: 150px;
+    width: 100px;
+}
+.paging {
+    width: 100%;
+    height: 30px;
+    border-top: 1px solid #ccc;
+}
+/*css cho phan lich su muon tra*/
+.history-content {
+    width: calc(100% - 30px);
+    position: absolute;
+    bottom: 15px;
+}
+.history-lable-content{
+    font-size:14px;
+    padding:8px;
+    
+}
+.history-table-content {
+    min-height: 170px;
+    position: relative;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.history-data {
+    width: 100%;
+    overflow: scroll;
+    position: absolute;
+    bottom: 30px;
+    top: 0;
+    
+}
+
+

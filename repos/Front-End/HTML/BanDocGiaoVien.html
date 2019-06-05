@@ -4,8 +4,9 @@
 <head>
     <meta charset="utf-8" />
     <title>Quản lý thư viện</title>
-    <link href="../CSS/BanDocGiaoVien.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!--<link href="../Vendor/CSS/bootstrap.min.css" rel="stylesheet" />-->
+    <link href="../CSS/BanDocGiaoVien.css" rel="stylesheet" />
 </head>
 <body>
     <div class="header">
@@ -18,6 +19,13 @@
                     <li class="title-dropdown">- Thư viện</li>
                     <li class="field-dropdown">
                         <i class="fa fa-caret-down expand-icon"></i>
+                        <div class="main-field">
+                            <table>
+                                <tr>
+                                    <td></td>
+                                </tr>
+                            </table>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -31,22 +39,65 @@
         </div>
         <div class="bottom-header">
             <div class="navbar-dropdown">
-                <a href="#">Bàn làm việc</a>
-                <a href="#">Sách <i class="fa fa-angle-down v-top"></i></a>
-                <a href="#">Báo, tạp chí <i class="fa fa-angle-down v-top"></i></a>
-                <a href="#">Lưu thông <i class="fa fa-angle-down v-top"></i></a>
-                <a href="#">Bạn đọc</a>
-                <a href="#">Danh mục <i class="fa fa-angle-down v-top"></i></a>
-                <a href="#">Thiết lập <i class="fa fa-angle-down v-top"></i></a>
-                <a href="#">Báo cáo</a> 
-             </div>
+                <div><a href="#">Bàn làm việc</a></div>
+                <div class="book-dropdown dropdown">
+                    <a href="#">Sách <span class="fa fa-angle-down v-top"></span></a>
+                    <div class="dropdown-content">
+                        <a href="#">Danh sách sách</a>
+                        <a href="#">Khai báo số lượng sách ban đầu</a>
+                        <a href="#">Nhập sách</a>
+                        <a href="#">Xuất sách</a>
+                        <a href="#">Kiểm kê sách</a>
+                    </div>
+                </div>
+                <div class="news-dropdown dropdown">
+                    <a href="#">Báo, tạp chí <i class="fa fa-angle-down v-top"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#">Danh sách baos, tạp chí</a>
+                        <a href="#">Đăng kí báo, tạp chí</a>
+                    </div>
+                </div>
+                <div class="circulate-dropdown dropdown">
+                    <a href="#">Lưu thông <i class="fa fa-angle-down v-top"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#">Lập phiếu mượn</a>
+                        <a href="#">Trả sách</a>
+                        <a href="#">Danh sách phiếu mượn</a>
+                        <a href="#">Ghi nhận số lượt bạn đọc tại chỗ</a>
+                    </div>
+                </div>
+                <div><a href="#">Bạn đọc</a></div>
+                <div class="catagory-dropdown dropdown">
+                    <a href="#">Danh mục <i class="fa fa-angle-down v-top"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#">Nhà xuất bản</a>
+                        <a href="#">Kí hiệu phân loại</a>
+                        <a href="#">Danh sách mẫu trộn</a>
+                        <a href="#">Nhà cung cấp</a>
+                    </div>
+                </div>
+                <div class="setting-dropdown dropdown">
+                    <a href="#">Thiết lập <i class="fa fa-angle-down v-top"></i></a>
+                    <div class="dropdown-content">
+                        <a href="#">Thời gian học lịch nghỉ lễ</a>
+                        <a href="#">Nội quy thư viện</a>
+                        <a href="#">Kí hiệu xếp giá</a>
+                        <a href="#">Đánh số dăng kí cá biệt</a>
+                        <a href="#">Thông tin đơn vị</a>
+                        <a href="#">Thông tin năm học</a>
+                        <a href="#">Khởi tạo năm học mới</a>
+                        <a href="#">Nhật kí truy cập</a>
+                    </div>
+                </div>
+                <div><a href="#">Báo cáo</a></div>
+            </div>
             <div class="year-dropdown">
                 Năm học:
                 <button class="year">2018-2019 <i class="fa fa-angle-down v-top"></i></button>
             </div>
         </div>
     </div>
-    
+
     <div class="table-content">
         <div class="header-content">
             <div class="header-lable-content">Danh sách bạn đọc</div>
@@ -57,35 +108,136 @@
             <button class="feedback">Phản hồi</button>
         </div>
         <div class="main-content">
-            <div class="main-table-content">
-                <div class="main-menu-content">
-                    <div class="main-menu-btn ">
-                        <div class="registry"><span>Đăng kí bạn đọc</span> 
-                        <i class="fa fa-caret-down"></i></div>           
+            <div class="main-menu-content">
+                <div class="main-menu-btn ">
+                    <div class="registry">
+                        <span>Đăng kí bạn đọc</span>
+                        <i class="fa fa-caret-down"></i>
                     </div>
-                    <div class="main-menu-btn edit"><span>Sửa</span></div>
-                    <div class="main-menu-btn delete"><span>Xóa</span></div>
-                    <div class="main-menu-btn add"><span>Nạp</span></div>
-                    <span class="separation">|</span>
-                    <div class="main-menu-btn tool"><span>Tiện ích </span><i class="fa fa-caret-down"></i></div>
-                    <span class="separation">|</span>
-                    <div class="main-menu-btn print"><span>In </span><i class="fa fa-caret-down"></i></div>
-                    <div class="main-menu-btn help"><span>Giúp</span></div>
                 </div>
-                <div class="main-table-data-content">
-                    yukyuk
+                <div class="main-menu-btn edit"><span>Sửa</span></div>
+                <div class="main-menu-btn delete"><span>Xóa</span></div>
+                <div class="main-menu-btn add"><span>Nạp</span></div>
+                <span class="separation">|</span>
+                <div class="main-menu-btn tool"><span>Tiện ích </span><i class="fa fa-caret-down"></i></div>
+                <span class="separation">|</span>
+                <div class="main-menu-btn print"><span>In </span><i class="fa fa-caret-down"></i></div>
+                <div class="main-menu-btn help"><span>Giúp</span></div>
+            </div>
+            <div class="table">
+                <div class="table-header">
+                    <div class="header-row1 row">
+                        <div class="field1">STT</div>
+                        <div class="field2">Mã thẻ</div>
+                        <div class="field3">Tên bạn đọc</div>
+                        <div class="field4">Lớp</div>
+                        <div class="field5">Giới tính</div>
+                        <div class="field6">Ngày sinh</div>
+                        <div class="field7">Ngày cấp</div>
+                        <div class="field8">Ngày hiệu lực</div>
+                        <div class="field9">Ngày hết hạn</div>
+                    </div>
                 </div>
-                <div class="main-paging-content">
-                    tyuktulk
+                <div class="table-body">
+                    <div class="body-row1 row">
+                        <div class="field1">1</div>
+                        <div class="field2">Mã thẻ</div>
+                        <div class="field3">Tên bạn đọc</div>
+                        <div class="field4">Lớp</div>
+                        <div class="field5">Giới tính</div>
+                        <div class="field6">Ngày sinh</div>
+                        <div class="field7">Ngày cấp</div>
+                        <div class="field8">Ngày hiệu lực</div>
+                        <div class="field9">Ngày hết hạn</div>
+                    </div>
+                    <div class="body-row1 row">
+                        <div class="field1">STT</div>
+                        <div class="field2">Mã thẻ</div>
+                        <div class="field3">Tên bạn đọc</div>
+                        <div class="field4">Lớp</div>
+                        <div class="field5">Giới tính</div>
+                        <div class="field6">Ngày sinh</div>
+                        <div class="field7">Ngày cấp</div>
+                        <div class="field8">Ngày hiệu lực</div>
+                        <div class="field9">Ngày hết hạn</div>
+                    </div>
+                    <div class="body-row1 row">
+                        <div class="field1">STT</div>
+                        <div class="field2">Mã thẻ</div>
+                        <div class="field3">Tên bạn đọc</div>
+                        <div class="field4">Lớp</div>
+                        <div class="field5">Giới tính</div>
+                        <div class="field6">Ngày sinh</div>
+                        <div class="field7">Ngày cấp</div>
+                        <div class="field8">Ngày hiệu lực</div>
+                        <div class="field9">Ngày hết hạn</div>
+                    </div>
+                    <div class="body-row1 row">
+                        <div class="field1">STT</div>
+                        <div class="field2">Mã thẻ</div>
+                        <div class="field3">Tên bạn đọc</div>
+                        <div class="field4">Lớp</div>
+                        <div class="field5">Giới tính</div>
+                        <div class="field6">Ngày sinh</div>
+                        <div class="field7">Ngày cấp</div>
+                        <div class="field8">Ngày hiệu lực</div>
+                        <div class="field9">Ngày hết hạn</div>
+                    </div>
+                    <div class="body-row1 row">
+                        <div class="field1">STT</div>
+                        <div class="field2">Mã thẻ</div>
+                        <div class="field3">Tên bạn đọc</div>
+                        <div class="field4">Lớp</div>
+                        <div class="field5">Giới tính</div>
+                        <div class="field6">Ngày sinh</div>
+                        <div class="field7">Ngày cấp</div>
+                        <div class="field8">Ngày hiệu lực</div>
+                        <div class="field9">Ngày hết hạn</div>
+                    </div>
+                    <div class="body-row1 row">
+                        <div class="field1">STT</div>
+                        <div class="field2">Mã thẻ</div>
+                        <div class="field3">Tên bạn đọc</div>
+                        <div class="field4">Lớp</div>
+                        <div class="field5">Giới tính</div>
+                        <div class="field6">Ngày sinh</div>
+                        <div class="field7">Ngày cấp</div>
+                        <div class="field8">Ngày hiệu lực</div>
+                        <div class="field9">Ngày hết hạn</div>
+                    </div>
                 </div>
+            </div>
+            <div class="main-paging paging">
+                tyuktulk
             </div>
         </div>
         <div class="history-content">
             <div class="history-lable-content">Lịch sử mượn trả</div>
-            <div class="history-table-content"></div>
+            <div class="history-table-content table">
+                <table class="history-data table-data">
+                    <tr>
+                        <th>STT</th>
+                        <th>Mã ISBN</th>
+                        <th>Nhan đề</th>
+                        <th>Số phiếu</th>
+                        <th>Tác giả</th>
+                        <th>Ngày mượn</th>
+                        <th>Ngày hẹn trả</th>
+                        <th>Ngày trả/báo mất</th>
+                        <th>Tình trạng</th>
+                    </tr>
+
+                </table>
+
+            </div>
+            <div class="history-paging paging">
+                tyuktulk
+            </div>
         </div>
     </div>
-
+    <script src="../Vendor/JS/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script src="../Vendor/JS/bootstrap.min.js" type="text/javascript"></script>
+    <script src="../Vendor/JS/jquery-ui.min.js" type="text/javascript"></script>
     <script src="../JS/BanDocGiaoVien.js" type="text/javascript"></script>
 </body>
 </html>
