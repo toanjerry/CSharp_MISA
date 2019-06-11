@@ -100,9 +100,6 @@ body {
     margin:15px 0 0 0;
     width:180px;
 }
-.show {
-    display: block !important;
-}
 
 .bottom-header{
     position:absolute;
@@ -182,10 +179,15 @@ body {
 .setting-dropdown > div {
     width: 180px;
 }
-.year{
-    width:95px;
-    height:24px;
-    font-weight:bold;
+.year {
+    width: 95px;
+    height: 24px;
+    font-weight: bold;
+    background-color: #e6e8ed;
+}
+.year option{
+    font-size:14px;
+    height:20px;
 }
 /*css cho phan table-content*/
 .table-content {
@@ -198,7 +200,7 @@ body {
 }
 /*-----------*/
 .header-content {
-    width:calc(100% - 30px);
+    width:100%;
     position: relative;
 }
 .header-lable-content {
@@ -247,49 +249,89 @@ body {
     background-color: #e8e8e8;
     border-bottom:1px solid #ccc;
 }
-
-.main-menu-content div {
-    display: inline-block;
-}
-
 .main-menu-btn {
     margin: 3px 0;
-    padding: 1px 5px;
+    padding: 1px 3px 1px 0;
     border: 1px solid transparent;
     height: 18px;
-    font-size: 13px;
+    font-size: 12px;
+    position: relative;
+    display: inline-block;
 }
-.main-menu-btn span{
-    margin-left:18px;
-    
+.main-menu-btn:first-child{
+    margin-left:3px;
 }
-    .main-menu-btn:hover {
+.main-menu-btn:hover {
         background-color: #ced8e5;
         border-color: #99bce8;
         border-radius: 3px;
         cursor: pointer;
+}
+
+    .main-menu-btn > div:first-child {
+        display: inline-block;
+        height: 18px;
+        line-height: 18px;
+        margin-bottom: 6px;
     }
-        .main-menu-btn:hover .separation-in {
-            border-left: 1px solid #98c8ff;
-        }
+    .main-menu-btn > div:first-child span {
+        margin-left: 20px;
+    }
+#registry-dropdown{
+    display:inline-block;
+    height:18px;
+    width:10px;
+}
+.dropdown-content-main {
+    display: none;
+    position: absolute;
+    background-color: #e5e5e5;
+    left: 0;
+    z-index: 1;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 10px -2px;
+}
+.dropdown-content-main div {
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    width: max-content;
+    padding-left: 30px;
+    padding-right:20px;
+    border: 1px solid transparent;
+    margin: 2px;
+    background-color: transparent;
+    border-radius:3px;
+
+}
+    .dropdown-content-main div:hover {
+        border: 1px solid #7da9f2;
+        background-color: #dce5f4;
+    }
+
 .separation-in {
     border-left: 1px solid transparent;
     height: 16px;
     margin: -4px 0;
+    display: inline-block;
+}
+.main-menu-btn:hover .separation-in {
+    border-left-color: #99bce8;
 }
 .separation-out {
     border-left: 1px solid #98c8ff;
     height: 16px;
     margin: -4px 0;
+    display: inline-block;
 }
-    .registry {
-        background: url(../resourse/bandoc-icon/add.png) no-repeat 0 1px;
-    }
+.registry {
+    background: url(../resourse/bandoc-icon/add.png) no-repeat 1px 1px;
+}
 .edit {
     background: url(../resourse/bandoc-icon/edit.png) no-repeat 2px 2px;
 }
 .delete {
-    background: url(../resourse/bandoc-icon/delete_metro.png) no-repeat 0 1px;
+    background: url(../resourse/bandoc-icon/delete_metro.png) no-repeat 1px 1px;
 }
 .add {
     background: url(../resourse/bandoc-icon/refresh.png) no-repeat 1px 2px;
@@ -302,6 +344,9 @@ body {
 }
 .help {
     background: url(../resourse/bandoc-icon/Help16.png) no-repeat 2px 2px;
+}
+.show {
+    display: block;
 }
 /*css cho phan main table*/
 .table{
@@ -323,7 +368,7 @@ body {
     text-align:center;
     font-weight:bold;
 }
-.table-body .row:c {
+.table-body .row:hover {
     background-color: #FFCB60;
 }
 .row {

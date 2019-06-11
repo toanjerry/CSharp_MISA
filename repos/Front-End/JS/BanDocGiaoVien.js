@@ -1,11 +1,12 @@
 ﻿$(function () {
+// hiện popup cho phần menu của table
     $(".registry-popup").dialog({
-        autoOpen:false,
+        autoOpen: false,
         resizable: false,
         height: "auto",
         width: 400,
         modal: true,
-        title:"Đăng kí bạn đọc",
+        title: "Đăng kí bạn đọc",
         buttons: {
             "Cất": function () {
                 $(this).dialog("close");
@@ -15,7 +16,7 @@
             }
         }
     });
-    $(".registry").on("click", function () {
+    $(".registry span, .separation ").on("click", function () {
         $(".registry-popup").dialog("open");
     });
 
@@ -115,19 +116,25 @@
     $(".print-card").on("click", function () {
         $(".print-card-popup").dialog("open");
     });
-});
-function showDropdown(id) {
-    document.getElementById(id).classList.toggle("show");
-}
-window.onclick = function (event) {
-    if (!event.target.matches('.dropdown-btn')) {
-        var dropdowns = document.getElementsByClassName("dropdown-content-top");
-        var i;
-        for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains('show')) {
-                openDropdown.classList.remove('show');
+// show/hide dropdown phần menu của table và phần dropdown header
+    $(".dropdown-btn").on("click", function() {
+        $(this).next().toggle("show");
+    });       
+    $("#registry-dropdown").on("click", function () {
+        $(this).parent().next().toggle("show");
+    });
+
+    window.onclick = function (event) {
+        if (!event.target.matches('dropdown-btn')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content-top");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
             }
         }
-    }
-};
+    };
+});
+

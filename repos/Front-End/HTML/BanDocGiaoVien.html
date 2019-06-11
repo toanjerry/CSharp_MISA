@@ -33,7 +33,7 @@
             </div>
             <div class="lable-right">
                 <div class="user">
-                    <div class="lable-right-content dropdown-btn" onclick="showDropdown('lable-right-dropdown')">
+                    <div class="lable-right-content dropdown-btn" >
                         Trường THPT MISA 1 - Trần Thị Mai&nbsp;
                         <i class="fa fa-angle-down"></i>
                     </div>
@@ -41,15 +41,14 @@
                         <a href="#">Thay đổi mật khẩu</a>
                         <a href="#">Đăng xuất</a>
                     </div>
-                </div>
-               
+                </div> 
                 <div class="help-top">
-                    <div class="help-icon dropdown-btn" onclick="showDropdown('help-dropdown')"></div>
+                    <div class="help-icon dropdown-btn"></div>
                     <div class="dropdown-content-top" id="help-dropdown">
                         <a href="#">Nội dung trợ giúp</a>
                         <a href="#">Website MISA</a>
                         <a href="#">Tính năng mới</a>
-                        <a href="#">Tải bộ cài TeamvieweQS</a>
+                        <a href="#">Tải bộ cài TeamviewerQS</a>
                         <a href="#">Tải mẫu gia hạn sử dụng PM</a>
                         <a href="#">Giới thiệu</a>
                     </div>
@@ -112,7 +111,12 @@
             </div>
             <div class="year-dropdown">
                 Năm học:
-                <button class="year">2018-2019 <i class="fa fa-angle-down v-top"></i></button>
+                <select class="year" de>
+                    <option>2017-2018</option>
+                    <option>2018-2019</option>
+                    <option>2019-2020</option>
+                    <!--<i class="fa fa-angle-down v-top"></i>-->
+                </select>
             </div>
         </div>
     </div>
@@ -128,29 +132,66 @@
         </div>
         <div class="main-content">
             <div class="main-menu-content">
-                <div class="main-menu-btn ">
+                <div class="main-menu-btn">
                     <div class="registry">
                         <span>Đăng kí bạn đọc</span>
                         <div class="separation-in"></div>
-                        <i class="fa fa-caret-down registry-dropdown"></i>
+                        <div id="registry-dropdown">
+                            <i class="fa fa-caret-down"></i>
+                        </div>
+                    </div>
+                    <div class="dropdown-content-main">
+                        <div>Đăng kí bạn đọc từ danh sách giáo viên</div>
                     </div>
                 </div>
-                <div class="main-menu-btn edit"><span>Sửa</span></div>
-                <div class="main-menu-btn delete"><span>Xóa</span></div>
-                <div class="main-menu-btn add"><span>Nạp</span></div>
-                <div class="separation-out"></div>
-                <div class="main-menu-btn tool">
-                    <span>Tiện ích</span>
-                    <div class="separation-in"></div>
-                    <i class="fa fa-caret-down"></i>
+                <div class="main-menu-btn">
+                    <div class="edit">
+                        <span>Sửa</span>
+                    </div>
+                </div>
+                <div class="main-menu-btn">
+                    <div class="delete">
+                        <span>Xóa</span>
+                    </div>
+                </div>
+                <div class="main-menu-btn">
+                    <div>
+                        <div class="add">
+                            <span>nạp</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="separation-out"></div>
-                <div class="main-menu-btn print">
-                    <span>In</span>
-                    <div class="separation-in"></div>
-                    <i class="fa fa-caret-down"></i>
+                <div class="main-menu-btn" id="tool-dropdown">
+                    <div class="tool dropdown-btn">
+                        <span>Tiện ích</span>
+                        <div class="separation-in"></div>
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-content-main">
+                        <div>Nhập khẩu xuất khẩu</div>
+                        <div>Xuất khẩu</div>
+                        <div>Cập nhạt ảnh hàng loạt</div>
+                    </div>
                 </div>
-                <div class="main-menu-btn help" onclick="location.href='http://help.qlth.vn/tv_giao_vien.htm'"><span>Giúp</span></div>
+                <div class="separation-out"></div>
+                <div class="main-menu-btn" id="print-dropdown">
+                    <div class="print dropdown-btn">
+                        <span>In</span>
+                        <div class="separation-in"></div>
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                    <div class="dropdown-content-main">
+                        <div>Thẻ thư viện giáo viên</div>
+                        <div>Thẻ thư viện giáo viên (mã vạch)</div>
+                        <div>Danh sách bạn đọc giáo viên</div>
+                    </div>
+                </div>
+                <div class="main-menu-btn" onclick="location.href='http://help.qlth.vn/tv_giao_vien.htm'">
+                    <div class="help">
+                        <span>Giúp</span>
+                    </div>
+                </div>
             </div>
             <div class="table">
                 <div class="table-header">
@@ -262,7 +303,6 @@
                 tyuktulk
             </div>
         </div>
-<<<<<<< HEAD
     </div>
     <div class="registry-popup">
         stertyrtuy
@@ -284,8 +324,6 @@
     </div>
     <div class="print-barcode-popup">
         stertyrtuy
-=======
->>>>>>> 7d6c1a79a881f474f2ce08ff0793ad62a8136eee
     </div>
     <script src="../Vendor/JS/jquery-3.4.1.min.js" type="text/javascript"></script>
     <script src="../Vendor/JS/bootstrap.min.js" type="text/javascript"></script>
